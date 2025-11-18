@@ -1,0 +1,263 @@
+.container {
+  background-color: #b9b8b8;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.backArrow {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 3.2rem;
+  color: #0a0a0a;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.backArrow:hover {
+  color: #06e94a;
+  transform: translateX(-3px);
+}
+
+.newAuctionBtn {
+  display: block;
+  margin: 0 auto 2rem auto;
+  background-color: #0077ff;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.newAuctionBtn:hover {
+  background-color: #005ed8;
+}
+
+.btn {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.notification {
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.tab {
+  background-color: #ccc;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  background-color: #0d6dad;
+}
+
+.activeTab {
+  background-color: #0077ff;
+  color: white;
+}
+
+.modalOverlay,
+.editOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal,
+.editAuction {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 95vh;
+  overflow-y: auto;
+}
+
+.modal input,
+.modal textarea,
+.editAuction input,
+.editAuction textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.createBtn {
+  background-color: #28a745;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancelBtn {
+  background-color: #dc3545;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cardContainer {
+  display: flex;
+  max-width: 70%;
+  height: fit-content;
+}
+
+.card {
+  background-color: hsla(123, 93%, 47%, 0.356);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  word-wrap: break-word;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin-bottom: 0.8rem;
+}
+
+.card p {
+  margin: 0.3rem 0;
+  font-size: 1.3rem;
+  color: #555;
+}
+
+.card p strong {
+  color: #333;
+}
+
+.auctionList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.listHeader,
+.row {
+  display: grid;
+  grid-template-columns: 200px 150px 80px 100px 100px 50px 130px 130px 150px 100px 150px 200px 200px;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+}
+
+.listHeader {
+  font-weight: bold;
+  background-color: #f2f2f2;
+}
+
+.row span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.pagination {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.pagination button:hover {
+  background-color: #e0f0ff;
+  border-color: #2196f3;
+}
+
+.pagination button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+  color: #999;
+}
+
+.pagination span {
+  font-weight: bold;
+}

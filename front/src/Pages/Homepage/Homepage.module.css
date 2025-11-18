@@ -1,0 +1,160 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  padding: 4rem 2rem 2rem;
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.backArrow {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 3.2rem;
+  color: #0a0a0a;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.backArrow:hover {
+  color: #00a86b;
+  transform: translateX(-3px);
+}
+
+.header {
+  margin-top: 10rem;
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #022912;
+
+  border-bottom: 3px solid #00a86b;
+  display: inline-block;
+  padding-bottom: 0.2rem;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 2.5rem;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  background-color: #037537;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(12, 187, 123, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  background-color: #007f55;
+  box-shadow: 0 4px 12px rgba(0, 127, 85, 0.6);
+}
+
+.messagesIconWrapper {
+  margin-top: 3rem;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2.8rem;
+  cursor: pointer;
+  color: rgb(4, 97, 4);
+  transition: transform 0.2s, color 0.2s;
+}
+
+.messagesIconWrapper:hover {
+  transform: scale(1.2);
+  color: #0cbb40;
+}
+
+.recsTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #022912;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid #00a86b;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.recsGrid {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 600px;
+  max-height: 55vh;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.recCard {
+  background: #ffffff;
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  border-left: 5px solid #00a86b;
+}
+
+.recCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.recCard h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+  color: #037537;
+}
+
+.recCard p {
+  margin: 0.2rem 0;
+  color: #444;
+  font-size: 0.95rem;
+}
+.recCard .categories {
+  margin-top: 0.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.recCard .category {
+  background: #e6f4ea;
+  color: #037537;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  border: 1px solid #00a86b33;
+  white-space: nowrap;
+}
